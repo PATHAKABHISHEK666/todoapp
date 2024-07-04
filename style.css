@@ -1,0 +1,166 @@
+:root {
+  --list_bg: #ffffff;
+  --list_font: #d9d9d9;
+  --container_bg: #fbfbfb;
+  --red_font: #ff5151;
+  --font_green: #48a300;
+  --main_bg: #48a30012;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: Poppins;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  gap: 0px;
+  opacity: 0px;
+  background: var(--main_bg);
+}
+
+.focusOnToday {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 96px;
+  color: var(--font_green);
+}
+
+.focusOnToday span {
+  color: #61481c;
+}
+
+.container {
+  position: relative;
+  background: var(--container_bg);
+  width: 450px;
+  height: 520px;
+  border-radius: 20px;
+  padding: 30px;
+  margin-inline: auto;
+  box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+}
+
+.today {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.sun {
+  width: 35px;
+}
+
+.information {
+  font-size: 14px;
+  color: #858585;
+  font-weight: 400;
+  position: absolute;
+  top: 65px;
+}
+
+.progressBar {
+  width: 390px;
+  height: 25px;
+  margin-top: 55px;
+  border-radius: 15px;
+  background-color: #48a3001a;
+}
+.progress_value {
+  background-color: var(--font_green);
+  height: 25px;
+  width: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: width 0.4s ease-in-out;
+  color: var(--container_bg);
+}
+.progress_value span {
+  font-size: 10px;
+  padding: 5px 20px;
+  min-width: max-content;
+}
+.notify {
+  color: var(--red_font);
+  font-size: 14px;
+  margin-top: 10px;
+  opacity: 0;
+  cursor: default;
+}
+.visibility {
+  opacity: 1;
+}
+
+.goals {
+  width: 390px;
+  height: 60px;
+  margin: 15px 0px;
+  border-radius: 17px;
+  border: 1px solid #0000001a;
+  padding: 17px;
+  display: flex;
+  gap: 20px;
+}
+
+.des {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+}
+.madewithlove {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+  text-align: center;
+  margin-top: 30px;
+}
+.tick {
+  width: 22px;
+  height: 22px;
+  top: 577px;
+  left: 454px;
+  gap: 0px;
+  border-radius: 50%;
+  border: 2px solid #61481c4d;
+}
+.done .tick {
+  background-image: url(done.png);
+  background-size: cover;
+  border: none;
+}
+input {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  resize: none;
+  background: none;
+  box-shadow: none;
+  font-size: 16px;
+  line-height: inherit;
+}
+.done input {
+  text-decoration: line-through;
+  color: var(--font_green);
+}
+textarea::placeholder,
+input::placeholder {
+  color: #61481c4d; /* You can change this color to whatever you want */
+}
